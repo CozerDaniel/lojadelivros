@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <nav class="navbar navbar-expand-lg"> <!--Nav e search-->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-film mr-2"></i>
+                    LOJA DE LIVROS
+            </a>
+    
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+                <a class="nav-link nav-link-1 active" aria-current="page" href="index.html">Home</a>
+            </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-2" href="Catálogo.html">Catálogo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-3" href="Login.html">Login</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link nav-link-4" href="Carrinho.html">Carrinho</a>
+        </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+
+    <div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll" data-image-src="img/hero.jpg">
+    <form class="d-flex tm-search-form">
+    <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success tm-search-btn" type="submit">
+        <i class="fas fa-search"></i>
+    </button>
+</form> <!--Nav e search-->
+    
+    <title>Criar Conta</title>
+</head>
+<main>
+    <body>
+    <div class="container">
+        <h2>Novo(a) por aqui?</h2><br>
+        <p>Precisamos de algumas informações para criar sua conta:</p><br>
+    </div>
+    <br>
+    <form action="">
+         <div>
+            <label for="nome">NOME*:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="sobrenome">SOBRENOME*:</label>
+            <input type="text" id="sobrenome" name="sobrenome" required>
+        </div>
+        <br>
+        <div>
+            <label for="email">E-MAIL*:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>CPF*:</label>
+            <input type="text" class="form-control" required>
+        </div>
+        <br>
+        <div>
+            <label>CEP*:</label>
+            <input type="text" class="form-control" required>
+
+            <label for="birthday">DATA DE NASCIMENTO*:</label>
+            <input type="date" name="birthday" id="birthday" required>
+       </div>
+        <br>
+        <div>
+            <label for="phone">CELULAR*:</label>
+            <input autocomplete="tel" type="tel" id="phone" name="phoneBR" required id="phoneBR" class="form-control is-invalid">
+
+            <label for="pwd">SENHA*:</label>
+            <input type="password" id="pwd" name="pwd" required>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="CRIAR CONTA" />
+        </div>
+    </form>
+   
+</body>
+</main>
+
+</html>
