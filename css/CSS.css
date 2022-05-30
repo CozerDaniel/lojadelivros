@@ -1,36 +1,4 @@
 
-.banner-wrapper{
-    display: grid;
-    place-items: center;
-    height: 10vh
-}
-
-#banners-wrapper{
-    width: 100vw;
-}
-
-#banners {
-    display: flex;
-    
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-}
-
-.banner{
-    flex: none;
-
-    width: 100%;
-    height: 400px;
-
-    scroll-snap-align: start;
-}
-
-.banner img{
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
 
 *{
     font-family: 'Roboto', sans-serif;
@@ -82,13 +50,11 @@
         padding: 10px 0;
         text-align: center;
         color: white;
-
     }
-
-    @media screen and (max-width: 1360px){
+    @media screen and (max-width: 900px){
         .produto-single{
             width: 100%;
-            margin-right: 0;
+            margin-right: 0 auto
         }
     }
     
