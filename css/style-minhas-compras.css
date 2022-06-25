@@ -1,0 +1,215 @@
+
+@import url(./index.css);
+
+
+/* SEÇÕES */
+.sacola{
+    /* border: 1px solid blue; */
+    width: 58%;
+}
+.compra{
+    /* border: 1px solid red; */
+    width: 40%;
+}
+
+.header-secao{
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid var(--sec);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.header-secao h2{
+    color: var(--sec);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* COLUNA ITENS */
+#btn-comprar-header-secao{
+    width: 150px;
+    height: 20px;
+    font-size: 8px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* ÁREA DOS ITENS */
+.itens{
+    /* border: 1px solid green; */
+    border-bottom: 1px solid var(--sec);
+    width: 100%;
+    height: 150px;
+    margin: 5px 0;
+
+    display: flex;
+}
+.img-itens{
+    background-color: var(--destaque);
+    width: 100px;
+    height: 120px;
+    margin-right: 40px;
+
+}
+.itens-detalhe{
+    /* border: 1px solid orange; */
+    width: 55%;
+    height: 100%;
+}
+
+
+.itens-detalhe p{
+    font-size: 10px;
+    letter-spacing: .05rem;
+
+}
+.itens-info{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 60px;
+    padding: 5px 0px 0px  
+}
+.itens-info p{
+    margin: 0 5px 0 0;
+    display: inline-block;
+}
+.itens-info:last-child{
+    display: inline;
+}
+
+.itens-quantidade p{
+    margin: 5px;
+}
+.itens-subtotal p{
+    font-size: 10px;
+    letter-spacing: .05rem;
+    font-weight: 600;
+    display: block;
+    margin-top: 45px;
+    padding: 5px;
+}
+
+.itens-btn{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#itens-btn-sacola, .btn-comprar{
+    width: 200px;
+    height: 30px;
+    margin: 0;
+    font-size: 12px;
+}
+
+/* SEÇÃO  FINALIZAR COMPRA*/
+.compra-conteiner{
+    background-color: var(--destaque);
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+}
+.cep-frete{
+    height: 150px;
+
+    display: flex;
+    flex-direction: column;
+
+}
+.cep-input{
+    /* border: 1px solid; */
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+}
+.cep-frete h5, .resumo h5{
+    color: var(--sec);
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.cep-frete input[type=text]{
+    width: 80%;
+    height: 30px;
+    display: block;
+}
+.cep-frete #btn-ok{
+    background-color: var(--prim);
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    cursor: pointer;
+    
+    /* classe centralizadoHV */
+}
+.cep-frete a{
+    margin: 5px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--prim);
+    cursor: pointer;
+}
+.cep-frete a:hover{
+    text-decoration: underline;
+}
+
+.vale-cupom, .vale-troca{
+    font-size: 12px;
+    color: var(--sec);
+    display: flex;
+    justify-content: space-between;
+}
+.vale-cupom-titulo, .vale-troca-titulo{
+    display: flex;
+    align-items: center;
+}
+.vale-cupom-titulo p, .vale-troca-titulo p{
+  margin-left: 5px;
+}
+.icon-vale-troca, .icon-cupom{
+    background-color: var(--prim);
+    width: 15px;
+    height: 15px;
+}
+.vale-cupom a, .vale-troca a{
+    color: var(--sec);
+}
+
+.resumo-valores{
+    /* border: 1px solid; */
+    border-bottom: 2px solid var(--sec);
+    width: 100%;
+    height: 30px;
+
+    font-size: 12px;
+    color: var(--sec);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.compra-total{
+    padding: 25px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+}
+.compra-btn-comprar{
+    /* border: 1px solid; */
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}

@@ -1,0 +1,107 @@
+@import url(./index.css);
+
+/* Padrão para os botões */
+.botao-destaque, .botao-padrao{
+    border-radius: 10px;
+
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+
+    transition: .5s;
+
+    cursor: pointer;
+}
+.botao-destaque:hover, .botao-padrao:hover{
+    box-shadow: 2px 2px 4px var(--prim);
+}
+
+/* Detalhes especificos dos botões */
+.botao-padrao{
+    background-color: var(--destaque);
+    color: var(--sec);
+ 
+}
+.botao-padrao:hover{
+    background-color: var(--prim);
+    color: var(--fundo);
+    box-shadow: 2px 2px 4px var(--prim);
+    transition: .5s;
+}
+
+/* botão destaque cor laranja */
+.botao-destaque{
+    /* sem fundo */
+    border: 3px solid var(--destaque); 
+    color: var(--destaque);
+
+}
+.botao-destaque:hover{
+    border: 3px solid var(--prim);
+    color: var(--prim);
+} 
+/* BOTÃO DO TOPO DA PÁGINA */
+.btn-pedido-atendimento, .btn-conta-login{
+    /* border: 1px solid yellow; */
+    width: 25%;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+/* BOTÕES NO TOPO DA PÁGINA */
+.btn-topo{
+	width: 50%;
+    height: 100%;
+    min-width: 100px;
+
+    font-size: 12px;
+	text-align: center;
+
+    text-transform: uppercase;
+    padding: 4px;
+    color: var(--destaque);
+
+	box-sizing: border-box;
+	border: 2px solid var(--destaque);
+	border-radius: 15px;
+	margin: 0 0 0 15px;
+
+    transition: .5s;
+}
+.btn-topo:hover{
+    border: 2px solid var(--destaque);
+    color: var(--sec);
+    background-color: var(--destaque);
+
+    transition: .5s;
+}
+
+/* BOTÕES DO NAVEGADOR DA PÁGINA */
+.menuprincipal li{
+    border:  0.3px solid var(--prim);
+    border-radius: 10px;
+    width: 80px;
+    padding: 2px;
+
+    color: var(--prim);
+    text-transform: capitalize;
+    font-weight: bold;
+
+    transition: .5s;
+
+    cursor: pointer;
+}
+
+.menuprincipal li:hover{
+    border: none;
+    color: var(--destaque);
+    background-color: var(--sec);
+
+    transition: .5s;
+}

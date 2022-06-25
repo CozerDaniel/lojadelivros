@@ -1,0 +1,321 @@
+@import url(./index.css);
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* AÇÕES */
+*:focus{
+    outline:none;
+}
+
+/* HEADER PRODUTO */
+
+
+/* PRIMEIRA COLUNA IMAGENS E DESCRIÇÃO DO PRODUTO */
+.produto{
+    /* border: 1px solid red; */
+    width: 49.5%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.img-produto{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-destaque{
+    /* border: 1px solid; */
+    background-image: url("../img/amor-de-pai.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 400px;
+    width: 30vw;
+    height: 500px;
+    margin: 0;
+}
+.miniaturas-img{
+    /* border: 1px solid orange; */
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.img{
+    /* background-color: var(--prim);  isso deixou as outra miniaturas transparentes*/ 
+    width: 60px;
+    height: 60px;
+    transition: .5s;
+}
+.img:hover{
+    width: 80px;
+    height: 80px;
+    transition: .5s;
+}
+
+.descricao-produto{
+    /* border: 1px solid green; */
+    width: 100%;
+    height: auto;
+}
+.aba{
+    margin: 5px 0;
+}
+
+.aba h4{
+    /* border: 1px solid yellow; */
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+.descricao-produto .menu-sanfona > li{ 
+    border-bottom: 1px solid var(--sec);
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.descricao-produto .menu-sanfona > li:hover{
+    background-color: var(--fundo-sec);
+}
+
+.img2{
+    background-image: url("../img/amor-de-pai-verso.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.sobre-texto{
+    /* border: 1px solid blue; */
+    border-radius: 15px;
+    width: auto;
+    padding: 5px 10px;
+    background-color: var(--fundo-sec);
+    margin: 0 5px;
+    letter-spacing: .1rem;
+    display: none;
+}
+/* abre a aba do menu */
+.menu-sanfona .aba:focus .sobre-texto{
+    display: block;
+}
+
+.sobre-texto p{
+    margin-bottom: .3rem;
+}
+
+/* transition: width 2s, height 4s; */
+
+
+.rede-social{
+    /* border: 1px solid red; */
+    width: 80%;
+    height: 50px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.rede-social .bi{
+    color: var(--sec);
+    font-size: 2.5rem;
+    transition: .5s;
+
+    cursor: pointer;
+}
+.rede-social .bi:hover{
+    scale: 1.5;
+    transition: .5s;
+}
+
+
+/* SEGUNDA COLUNDA FORMAS DE PAGAMENTOS FRETE E DEFINIÇÕES DO PRODUTO */
+.compra-produto{
+    /* border: 1px solid brown; */
+    width: 49.5%;
+    height: auto;
+}
+.info-produto h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: .09rem;
+}
+.classificacao{
+    /* border: 1px solid; */
+
+    display: flex;
+    align-items: center;
+}
+.icons-classificacao{
+    /* border: 1px solid violet; */
+    width: 130px;
+    height: 20px;
+    margin: 5px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.estrela{
+    width: 15px;
+    height: 15px;
+    background-color: var(--prim);
+}
+
+.quantidade-produto input{
+    margin: 5px;
+}
+.btn-produto{
+    /* border: 1px solid brown; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#btn-sacola, #btn-comprar{
+    width: 250px;
+    height: 40px;
+    margin: 10px;
+}
+
+.info-produto p, .pagamento p, .frete-produto #obs-frete{
+    color: var(--sec);
+    font-size: 10px;
+    margin: 5px;
+}
+
+.classificacao a, .pagamento a, .tamanho-produto a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--prim);
+    margin: 5px;
+}
+.cores-produto h5, .tamanho-produto h5, .quantidade-produto h5, .frete-produto h5{
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--sec);
+    margin: 15px 5px 5px 5px;
+}
+.pagamento h3{
+    font-size: 2rem;
+    margin: 5px;
+}
+
+.frete-produto input{
+    margin: 5px;
+}
+
+
+/* estilo para opção de cores e tamanho REMOVIDO */
+.opcao-cores{
+    /* border: 1px solid ; */
+    width: 50%;
+    height: 80px;
+    box-sizing: border-box;
+    padding: 10px 30px;
+    
+    display: flex;
+    justify-content: space-around; 
+}
+.opcao-cores input[type="radio"], .opcao-tamanho input[type="radio"]{
+    display: none;
+}
+.opcao-cores input[type="radio"]:checked + .cor, .cor:hover{
+    box-shadow: 3px 2px 4px var(--destaque);
+    width: 50px;
+    height: 50px;
+    transition: .5s;
+}
+.cor{
+    width: 40px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .5s;
+}
+#c1{
+    background-color: blue;
+}
+#c2{
+    background-color: red;
+}
+#c3{
+    background-color: white;
+}
+
+
+.opcao-tamanho{
+    /* border: 1px solid; */
+    width: 50%;
+    height: 60px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tamanho{
+    border: 1px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    margin: 5px;
+    transition: .5s;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.opcao-tamanho input[type="radio"]:checked + .tamanho, .tamanho:hover{
+    width: 50px;
+    height: 50px;
+    box-shadow: 3px 2px 4px var(--destaque);
+    transition: .5s;
+}
+
+@media screen and (max-width:760px) {
+    .main{
+        /* border: 1px solid blue; */
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .produto, .compra-produto{
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #img-destaque{
+       width: 500px;
+
+    }
+}

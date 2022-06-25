@@ -1,0 +1,97 @@
+@import url(./index.css);
+
+.cards{
+    /* border: 2px solid orange; */
+    border-radius: 3px;
+    width: 15%;
+    height: 60%;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: .5s;
+}
+.cards:hover{
+    box-shadow: 3px 3px 6px var(--sec);
+    transition: .5s;
+}
+.card-img{
+    /* border: 2px solid yellow; */
+    background: #f0f0f0;
+    width: 100%;
+    height: 70%;
+}
+
+.card-info{
+    /* border: 2px solid #00A859; */
+    width: 100%;
+    height: 30%;
+    padding: 5px;
+
+    /* classe centralizadoHV */
+}
+
+.bannerofertas{
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    background: var(--prim);
+}
+
+.cards-selecionados{
+    /* border: 1px solid ; */
+    width: 100%;
+    height: 350px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+
+.cards-selecionados h2{
+    /* border: 1px solid blue; */
+    width: 100%;
+
+    /* classe centralizadoHV */
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.icon-avancar, .icon-voltar{
+    background-color: var(--prim);
+    width: 25px;
+    height: 60%;
+
+    cursor: pointer;
+
+    transition: .5s;
+
+}
+.icon-voltar:hover{
+    transition: .5s;
+    box-shadow: 20px 0 40px var(--fundo-sec);
+}
+.icon-avancar:hover{
+    transition: .5s;
+    box-shadow: -20px 0 30px var(--fundo-sec);
+}
+.card-info p{
+    font-size: 12px;
+    margin: 3px;
+}
+.card-info h5{
+    font-weight: bold;
+    margin: 5px 3px;
+}
+.cards-selecionados-item{
+    border: 1px solid;
+}
+#card-selecionados-1{
+    background-image: url(../img/jaqueta-feminina.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

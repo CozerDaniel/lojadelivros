@@ -1,0 +1,14 @@
+@import url(./index.css);
+
+:root {
+    --prim: #47a749;
+    --sec: #414143;
+    --fundo: #f1f9f9;
+    --destaque: #1adbe1;
+}
+
+.centralizadoHV{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

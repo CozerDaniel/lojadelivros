@@ -1,0 +1,18 @@
+@import url(./reset.css);
+@import url(./elementos.css);
+@import url(./botao.css);
+@import url(./variaveis-e-padrao.css);
+@import url(./header.css);
+@import url(./cards.css);
+@import url(./style.css);
+@import url(./style-minhas-compras.css);
+@import url(./style-produto.css);
+@import url(./favoritos.css);
+
+
+
+
+
+html{
+    font-size: 10px;
+}
