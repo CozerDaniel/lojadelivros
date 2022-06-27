@@ -126,7 +126,7 @@
 }
 .card-select-remove input{
     border: 1px solid orange;
-    width: 30px;
+    width: 20px;
 }
 .card-select-remove .bi{
     font-size: 3rem;
@@ -137,11 +137,20 @@
     color: red;
     transition: .5s;
 }
+
+.card-preco{
+    margin-left: 15px;
+}
+.card-preco-oculto{
+    display: none;
+}
+
+
+/* SEÇÃO TOTAL */
 .section-total{
     /* border: 1px solid orange; */
 }
 
-/* SEÇÃO TOTAL */
 .section-total{
     display: flex;
     justify-content: flex-end;
