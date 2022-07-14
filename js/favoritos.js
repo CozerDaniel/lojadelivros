@@ -6,9 +6,9 @@
 
 
 //AUTERAR O VALOR CONFORME AUMENTA A QUANTIDADE
-const valorUnit = document.querySelector('.card-preco-oculto');
-const preco = document.querySelector('.card-preco');
-const quantidade = document.querySelector('.card-quantidade');
+const valorUnit = document.querySelectorAll('.card-preco-oculto');
+const preco = document.querySelectorAll('.card-preco');
+const quantidade = document.querySelectorAll('.card-quantidade');
 
 const mudarPreco = (preco, quantidade) => {
     const p = preco;
@@ -22,9 +22,13 @@ const mudarPreco = (preco, quantidade) => {
     
 }
 
+const cardQuantidade = (e) => {
+    const Qntdd = e.target;
+}
+
 //calcula o valor pago com relação a quantidade escolhida
 quantidade.addEventListener('click', () => {
-    preco.innerText = mudarPreco(valorUnit.textContent, quantidade.value);
+    preco.innerText = mudarPreco(valorUnit.textContent, quantidade.value) + ',00';
 
 })
 
