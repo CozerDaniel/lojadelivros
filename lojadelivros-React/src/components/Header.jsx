@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { BiSearchAlt2, BiMenu} from 'react-icons/bi';
+
 
 import Logo from '../img/logo.png';
 import {
@@ -14,8 +15,12 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    NavbarText
+    Input,
+    Button,
+    Form
 } from 'reactstrap';
+
+import '../css/header.css'
 
 const Header = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,37 +29,62 @@ const Header = (props) => {
 
     return (
         <div>
-            <Navbar color="primary" dark expand="md">
-                <NavbarBrand href="/">Celke</NavbarBrand>
-                <NavbarToggler onClick={toggle} />
+            <Navbar expand="md" className='header'>
+                <NavbarBrand href="/">
+                    <img src={Logo} alt="" className='logo'/>
+                </NavbarBrand>
+                <NavbarToggler onClick={toggle}>
+                    <BiMenu className='icon-menu'/>
+                </NavbarToggler>
+                <Form className="area-pesquisa">
+                    <Input type="text" placeholder='Busque um livro' className='input-pesquisa'/>
+                    <Button type='submit' className='btn-pesquisa'>
+                        <BiSearchAlt2 />
+                    </Button>
+                </Form>
                 <Collapse isOpen={isOpen} navbar>
-                    <Nav className="mr-auto" navbar>
+                    <Nav className="mr-auto menu" navbar>
                         <NavItem>
-                            <NavLink href="https://celke.com.br/">Site Celke</NavLink>
+                           <NavLink href='/'>Loja de Livros</NavLink> 
                         </NavItem>
                         <NavItem>
-                            <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                            <NavLink href="#">cadastro</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret>
-                                Options
-                </DropdownToggle>
+                                catálogo
+                            </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
-                                    Option 1
-                  </DropdownItem>
+                                    ficção
+                                </DropdownItem>
                                 <DropdownItem>
-                                    Option 2
-                  </DropdownItem>
-                                <DropdownItem divider />
+                                    fantasia
+                                </DropdownItem>
                                 <DropdownItem>
-                                    Reset
-                  </DropdownItem>
+                                        Me surpreenda
+                                </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                        <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                                Usuário
+                            </DropdownToggle>
+                            <DropdownMenu right>
+                                <DropdownItem>
+                                    favoritos
+                                </DropdownItem>
+                                <DropdownItem>
+                                    minhas compras
+                                </DropdownItem>
+                                <DropdownItem>
+                                    carrinho
+                                </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>
-                    <NavbarText>Simple Text</NavbarText>
                 </Collapse>
+                    
             </Navbar>
         </div>
     );
