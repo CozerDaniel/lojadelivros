@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BiSearchAlt2, BiMenu} from 'react-icons/bi';
+import { BiSearchAlt2, BiMenu, BiCart} from 'react-icons/bi';
 
 
 import Logo from '../img/logo.png';
@@ -42,16 +42,19 @@ const Header = (props) => {
                         <BiSearchAlt2 />
                     </Button>
                 </Form>
+                <Button className='btn-carrinho' href='carrinho'>
+                    <BiCart/>
+                </Button>
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto menu" navbar>
                         <NavItem>
-                           <NavLink href='/'>Loja de Livros</NavLink> 
+                           <NavLink href='/' className='item-menu'>Loja de Livros</NavLink> 
                         </NavItem>
                         <NavItem>
-                            <NavLink href="#">cadastro</NavLink>
+                            <NavLink href="cadastro" className='item-menu'>cadastro</NavLink>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
+                            <DropdownToggle nav caret className='item-menu'>
                                 catálogo
                             </DropdownToggle>
                             <DropdownMenu right>
@@ -67,25 +70,27 @@ const Header = (props) => {
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         <UncontrolledDropdown nav inNavbar>
-                            <DropdownToggle nav caret>
+                            <DropdownToggle nav caret className='item-menu'>
                                 Usuário
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem>
+                                <DropdownItem href='favoritos'>
                                     favoritos
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem href='minhascompras'>
                                     minhas compras
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem href='carrinho'>
                                     carrinho
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                     </Nav>
-                </Collapse>
                     
+                </Collapse>
+                   
             </Navbar>
+            
         </div>
     );
 }
