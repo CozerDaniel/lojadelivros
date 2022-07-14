@@ -41,7 +41,7 @@
   }
   
   .submit-line input {
-    border: 1px solid var(--sec);
+    border: 1px solid var(--azul);
     border-radius: 10px;
     width: 100%;
   }
@@ -107,7 +107,7 @@
 }
 
 .destaque-item-img{
-  background-color: var(--prim);
+  background-color: var(--azul);
   border-radius: 50%;
   width: 70px;
   height: 70px;
@@ -119,7 +119,7 @@
 }
 .destaque-item-titulo h4{
   margin: 4px;
-  color: var(--sec);
+  color: var(--amarelo);
   font-size: 12px;
   font-weight: 800;
   letter-spacing: .01rem;
@@ -159,7 +159,7 @@
   height: 10%;
   font-size: 14;
   font-weight: bold;
-  color: var(--prim);
+  color: var(--amarelo);
 
 }
 .submenu-moda-intima{

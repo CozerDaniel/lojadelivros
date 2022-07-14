@@ -1,281 +1,235 @@
 <!DOCTYPE html>
-	<head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="stylesheet" href="./css/reset.css">
-    </head>
-    <body onload='testeCanvas()'>
-        <canvas id="tutorial"></canvas>
-        <header> 
-            <div class="header-topo">     
-                <div class="logo">
-                    <p><a href="#">LOGO</a></p>
-                </div>
-                <div class="btn-pedido-atendimento">
-		            <div class="btn-topo" href="#">
-                      Meus Pedidos
-                    </div>
-		            <div class="btn-topo" href="#">
-                        Atendimento
-                    </div>
-                </div>
-                <div class="btn-conta-login">   
-                    <div class="btn-topo" href="#">
-                        Criar conta
-                    </div>
-                    <div class="btn-topo" href="#">
-                        Login
-                    </div>
-                </div>
-                </div> 
+<html lang="pt-br">
 
-                <div class="pesquisa">
-                    <h1>LOGO</h1>
-                    <div class="submit-line">
-                        <input type="text" placeholder="O que você procura?"/>
-                        <button class="submit-lente centralizadoHV botao-padrao" type="submit">Buscar</button>
-                      </div>
-                    <a href="./page/favoritos.html">Favoritos</a>
-                    <div> <a href="./page/minhascompras.html"> Minhas compras </a> </div>
-                </div>   
-                    <!-- itens do menu -->
-            <nav class="menuprincipal"> 
-                <ul class="centralizadoHV">
-                    <li class="aba-categoria centralizadoHV">Feminino</li>
-                    <li class="aba-categoria centralizadoHV">Langerie</li>
-                    <li class="aba-categoria centralizadoHV">jeans</li>
-                    <li class="aba-categoria centralizadoHV">Plus size</li>
-                    <li class="aba-categoria centralizadoHV">Acessorios</li>
-                    <li class="aba-categoria centralizadoHV">Infantil</li>
-                    <li class="aba-categoria centralizadoHV" id="submenu-masc">Masculino</li>
-                    <li class="aba-categoria centralizadoHV">Calçados</li>
-                    <li class="aba-categoria centralizadoHV">Ofertas</li>
-                </ul>
-            </nav>
-            <!-- navegador submenu -->
-            <nav class="submenu">
-                <div class="submenu-destaque">
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>novidades</h4>
-                        </div>
-                    </div>
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>mais vendidos</h4>
-                        </div>
-                    </div>
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>especial da estação</h4>
-                        </div>
-                    </div>
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>peças intimas</h4>
-                        </div>
-                    </div>
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>calçados</h4>
-                        </div>
-                    </div>
-                    <div class="destaque-item">
-                        <div class="destaque-item-img botao-padrao"></div>
-                        <div class="destaque-item-titulo centralizadoHV">
-                            <h4>personagens</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="submenu-btn-categoria">
-                    <div class="btn-categoria botao-destaque">
-                        Masculino
-                    </div>
-                </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/CSS.css">
 
-                    <ul class="lista-item">
-                        <li> <a href="#">especial estação</a> </li>
-                        <li> <a href="#">tal pai tal filho</a> </li>
-                        <li> <a href="#">personagens</a> </li>
-                        <li> <a href="#">bermudas</a> </li>
-                        <li> <a href="#">camisetas</a> </li>
-                        <li> <a href="#">calças</a> </li>
-                        <li> <a href="#">polos</a> </li>
-                        <li> <a href="#">casacos e jaquetas</a> </li>
-                        <li> <a href="#">moletons e suéters</a> </li>
-                        <li> <a href="#">sunga</a> </li>
-                        <li> <a href="#">plus size</a> </li>
-                        <li> <a href="#">regatas</a> </li>
-                        <li> <a href="#">moda fitness</a> </li>
-                    </ul>
-                </div>
-                <div class="submenu-moda-intima">
-                    <h4>Moda Intima</h4>
-                    <ul class="lista-item">
-                        <li> <a href="#">cuecas</a> </li>
-                        <li> <a href="#">meias</a> </li>
-                        <li> <a href="#">pijamas</a> </li>
-                    </ul>
-                </div>
-                <div class="submenu-calcados">
-                    <h4>Calçados</h4>
-                    <ul class="lista-item">
-                        <li> <a href="#">bota</a> </li>
-                        <li> <a href="#">chinelo</a> </li>
-                        <li> <a href="#">sandálias</a> </li>
-                        <li> <a href="#">sapatenis</a> </li>
-                        <li> <a href="#">sapato social</a> </li>
-                        <li> <a href="#">tenis</a> </li>
-                        <li> <a href="#">tenis esportivo</a> </li>
-                        <li> <a href="#">ofertas</a> </li>
-                    </ul>
-                </div>
-                <div class="submenu-acessorios">
-                    <h4>Acessórios</h4>
-                    <ul class="lista-item">
-                        <li> <a href="#">bonés</a> </li>
-                        <li> <a href="#">carteiras</a> </li>
-                        <li> <a href="#">cintos</a> </li>
-                        <li> <a href="#">mochilas</a> </li>
-                        <li> <a href="#">relógios</a> </li>
-                        <li> <a href="#">ofertas</a> </li>
-                    </ul>
-                </div>
-                <div class="submenu-marcas">
-                    <h4>Marcas</h4>
-                    <ul class="lista-item">
-                        <li> <a href="#">Lupo</a> </li>
-                        <li> <a href="#">Mash</a> </li>
-                        <li> <a href="#">MR</a> </li>
-                        <li> <a href="#">Piticas</a> </li>
-                        <li> <a href="#">Rock & Soda</a> </li>
-                        <li> <a href="#">Topper</a> </li>
-                        <li> <a href="#">Zune Jeans</a> </li>
-                        <li> <a href="#">Ollie</a> </li>
-                        <li> <a href="#">Olumpikus</a> </li>
-                        <li> <a href="#">Mormaii</a> </li>
-                        <li> <a href="#">Nicoboco</a> </li>
-                        <li> <a href="#">Rainha</a> </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
-        <main>
-        <!-- CABEÇALHO DO MAIN OFERTAS -->
-        <header class="header-carrosel">
-            <p>Carrosel</p>
-        </header>
-        
-        <!-- OFERTAS DA SEMANA -->
-        <section class="ofertas">
-            <h1 class="ofertas-titulo centralizadoHV">OFERTAS DA SEMANA</h1>
-            <div class="cards botao-destaque">
-                <div class="card-img">
-                    
-                </div>
-                <div class="card-info centralizadoHV">
-                    <h4><a href="./page/produto.html">Tal mãe <br> tal filha</a></h4>
-                </div>
-            </div>
-            
-            <div class="cards botao-destaque">
-                <div class="card-img">
-                    
-                </div>
-                <div class="card-info centralizadoHV">
-                    <h4>Vestido</h4>
-                </div>
-            </div>
-            
-            <div class="cards botao-destaque">
-                <div class="card-img">
-                    
-                </div>
-                <div class="card-info centralizadoHV">
-                    <h4>Camiseta</h4>
-                </div>
-            </div>
-            <div class="cards botao-destaque">
-                <div class="card-img">
-                    
-                </div>
-                <div class="card-info centralizadoHV">
-                    <h4>Infantil</h4>
-                </div>
-            </div>
-                <div class="cards botao-destaque">
-                    <div class="card-img centralizadoHV">
-                        
-                    </div>
-                    <div class="card-info centralizadoHV">
-                    <h4>Fitness</h4>
-                    </div>
-                </div>
-            </section> 
+  <!--BOOTSTRAP CSS-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
 
-            <!-- BANNER PROMOCIONAL -->
-            <section class="bannerofertas">
-                Banner de Ofertas
-            </section>
+  <!-- link da font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
 
-            <!-- CARDS NOVIDADES -->
-            <section class="cards-selecionados">
-                <h2 class="cards-selecionados-titulo centralizadoHV">novidades</h2>
-                <div class="icon-voltar"></div>
-                <div class="cards cards-selecionados-item" >
-                    <div class="card-img" id="card-selecionados-1"></div>
-                    <div class="card-info">
-                        <p>Jaqueta Feminina</p>
-                        <h5>R$ 119,90</h5>
-                        <p>5x 23,98</p>
-                    </div>  
-                </div>
+  <title>Loja de Livros</title>
+</head>
 
-                <div class="cards cards-selecionados-item" >
-                    <div class="card-img"></div>
-                    <div class="card-info">
-                        <p>Jaqueta Feminina</p>
-                        <h5>R$ 119,90</h5>
-                        <p>5x 23,98</p>
-                    </div>  
-                </div>
+<body>
 
-                <div class="cards cards-selecionados-item" >
-                    <div class="card-img"></div>
-                    <div class="card-info">
-                        <p>Jaqueta Feminina</p>
-                        <h5>R$ 119,90</h5>
-                        <p>5x 23,98</p>
-                    </div>  
-                </div>
+  <!--BOOTSTRAP NAVBAR-->
+  <div class="container">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <img src="Img/logo.png" alt="" width="90" height="72" class="d-inline-block align-text-top">
+        <a class="navbar-brand" href="###"></i> Loja de Livros </a>
 
-                <div class="cards cards-selecionados-item" >
-                    <div class="card-img"></div>
-                    <div class="card-info">
-                        <p>Jaqueta Feminina</p>
-                        <h5>R$ 119,90</h5>
-                        <p>5x 23,98</p>
-                    </div>  
-                </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./page/cadas.html">Cadastro</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Catálogo
 
-                <div class="cards cards-selecionados-item" >
-                    <div class="card-img"></div>
-                    <div class="card-info">
-                        <p>Jaqueta Feminina</p>
-                        <h5>R$ 119,90</h5>
-                        <p>5x 23,98</p>
-                    </div>  
-                </div>
 
-                <div class="icon-avancar"></div>
-            </section>
-        </main>
-        <script src="./js/submenu.js"></script>
-        <script src="./js/canvas.js"></script>
-    </body>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Ficção</a></li>
+                <li><a class="dropdown-item" href="#">Fantasia</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Me Surpeenda</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Usuário
+
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="page/favoritos.html">Favoritos</a></li>
+                <li><a class="dropdown-item" href="page/minhascompras.html">Minhas compras</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="page/produto.html">Produto</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="btn btn-md btn-danger ml-4 text-light"><i class="fa-light fa-cart-shopping"></i> Carrinho</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!--BOOTSTRAP CARROSSEL-->
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="Img/banner1.jpg" class="d-block w-100"
+          alt="Anuncio: de Box e coleção de livros, para complentar a sua prórpria coleção pessoal.">
+      </div>
+      <div class="carousel-item">
+        <img src="Img/banner3.png" class="d-block w-100"
+          alt="Anuncio: Desconto de 50 porcento em livros fisicos e eBooks selecionados.">
+      </div>
+      <div class="carousel-item">
+        <img src="Img/banner1.jpg" class="d-block w-100"
+          alt="Anuncio: Cupom Geek7, 7 porcento de desconto em produtos selecionados.">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!---produtos-->
+
+  <h2>Mais Populares</h2>
+  <div id="produtos">
+
+  </div>
+
+  <div id="carrinho">
+    <script>
+      const itens = [
+        {
+          id: 0,
+          nome: 'Harry Potter',
+          img: src = "Img/hpcapa.jpg",
+          quantidade: 0
+        },
+        {
+          id: 1,
+          nome: 'Naruto',
+          img: src = "Img/narutocapa.jpg",
+          quantidade: 0
+        },
+        {
+          id: 2,
+          nome: 'Batman',
+          img: src = "Img/batmancapa.jpg",
+          quantidade: 0
+
+        },
+
+        {
+          id: 3,
+          nome: 'Superman',
+          img: src = "Img/supermancapa.jpg",
+          quantidade: 0
+
+        },
+
+        {
+          id: 4,
+          nome: 'Tower of God',
+          img: src = "Img/towcapa.jpg",
+          quantidade: 0
+
+        },
+
+
+        {
+          id: 6,
+          nome: 'Harry Potter',
+          img: src = "Img/hpcapa.jpg",
+          quantidade: 0
+        },
+        {
+          id: 7,
+          nome: 'Naruto',
+          img: src = "Img/narutocapa.jpg",
+          quantidade: 0
+        },
+        {
+          id: 8,
+          nome: 'Batman',
+          img: src = "Img/batmancapa.jpg",
+          quantidade: 0
+
+        },
+
+        {
+          id: 9,
+          nome: 'Superman',
+          img: src = "Img/supermancapa.jpg",
+          quantidade: 0
+
+        },
+
+        {
+          id: 10,
+          nome: 'Tower of God',
+          img: src = "Img/towcapa.jpg",
+          quantidade: 0
+
+        },
+
+
+      ]
+
+      inicializarLoja = () => {
+        var containerProdutos = document.getElementById('produtos');
+        itens.map((val) => {
+          containerProdutos.innerHTML += `
+                               
+             <div class="produto-single">
+                  <img src="`+ val.img + `" />
+                  <p>`+ val.nome + `</p>
+                  <a key="`+ val.id + `" href="#"> Adicionar ao carrinho! <a/>
+              </div>           
+             `;
+        })
+
+      }
+
+      inicializarLoja();
+
+    </script>
+</body>
+
 </html>

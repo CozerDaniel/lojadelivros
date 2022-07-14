@@ -77,10 +77,12 @@
 /* ESTILO DO CARD */
 .card{
     /* border: 1px solid green; */
-    padding: 5px;
+    width: 20%;
+    max-width: 500px;
     min-width: 200px;
     height: auto;
     margin: 5px;
+    padding: 5px;
 
     position: relative;
 

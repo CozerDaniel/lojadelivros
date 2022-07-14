@@ -1,4 +1,6 @@
 @import url(./reset.css);
+@import url(./cadastro.css);
+@import url(./padroes.css);
 @import url(./elementos.css);
 @import url(./botao.css);
 @import url(./variaveis-e-padrao.css);
@@ -8,8 +10,6 @@
 @import url(./style-minhas-compras.css);
 @import url(./style-produto.css);
 @import url(./favoritos.css);
-
-
 
 
 
