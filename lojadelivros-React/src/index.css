@@ -1,2 +1,8 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+@import url(./css/card.css);
 @import url(./css/padroes.css);
 @import url(./css/header.css);
+*{
+    box-sizing: border-box;
+}
