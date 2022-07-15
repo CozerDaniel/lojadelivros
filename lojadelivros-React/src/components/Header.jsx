@@ -37,7 +37,7 @@ const Header = (props) => {
                     <BiMenu className='icon-menu'/>
                 </NavbarToggler>
                 <Form className="area-pesquisa">
-                    <Input type="text" placeholder='Busque um livro' className='input-pesquisa'/>
+                    <Input type="text" placeholder='Busque um livro' className='input-pesquisa' aria-label=''/>
                     <Button type='submit' className='btn-pesquisa'>
                         <BiSearchAlt2 />
                     </Button>
@@ -57,7 +57,7 @@ const Header = (props) => {
                             <DropdownToggle nav caret className='item-menu'>
                                 catálogo
                             </DropdownToggle>
-                            <DropdownMenu right>
+                            <DropdownMenu>
                                 <DropdownItem>
                                     ficção
                                 </DropdownItem>
@@ -73,7 +73,7 @@ const Header = (props) => {
                             <DropdownToggle nav caret className='item-menu'>
                                 Usuário
                             </DropdownToggle>
-                            <DropdownMenu right>
+                            <DropdownMenu>
                                 <DropdownItem href='favoritos'>
                                     favoritos
                                 </DropdownItem>
