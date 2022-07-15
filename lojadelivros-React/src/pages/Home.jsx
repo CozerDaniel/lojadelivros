@@ -1,38 +1,33 @@
 import React, {useState, useEffect} from "react";
 
-import {
-    Carousel,
-    CarouselIndicators,
-    CarouselItem,
-    CarouselCaption,
-    CarouselControl,
-} from 'reactstrap'
+
 
 const Home = () => {
-    const [topBooks, setTopBooks] = useState([]);
+    const key = 'AIzaSyB9uGWjsSns0j9gXHP_IdsoRZn9g30eAzo'
+    const url = 'https://www.googleapis.com/books/v1/volumes?q=melhores+do+ano&key='
+    
+    const [Books, setBooks] = useState([]);
 
-    const acesso = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '28c6fd5c16msh42b6e1b29565d97p10b0ffjsn385ad67306c4',
-            'X-RapidAPI-Host': 'hapi-books.p.rapidapi.com'
-        }
+    const getBooks = async (url) => {
+        const resp = await fetch(url);
+        const data = await resp.json();
+
+        setBooks(data.items);
     };
 
-    const getTopBooks = () => {
+    
+    useEffect(() => {
+        const keyUrl = `${url}${key}`
+        
+        getBooks(keyUrl)
 
-        fetch('https://hapi-books.p.rapidapi.com/month/2022/3', acesso)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
-    }
-    useEffect(()=>{
-        getTopBooks();
-        console.log(topBooks)
-    },[])
+       
+    }, []);
+
+
     return (
-        <div>
-            <h2>home</h2>
+        <div> 
+            {Books && Books.map((book)=> <p>{ book.volumeInfo.title }</p> )}
         </div>
     )   
 }
