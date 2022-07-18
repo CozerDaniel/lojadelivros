@@ -1,7 +1,7 @@
 .area-cards{
     background-color: var(--azul);
     max-width: 2000px;
-    height: 40vh;
+    height: auto;
     margin: 1rem auto 0 auto;
     padding: .5rem;
 
@@ -11,6 +11,7 @@
 
 .titulo h3{
     text-align: center;
+    margin-bottom: 20px;
 
     text-transform: capitalize;
     font-weight: 700;
@@ -18,30 +19,51 @@
     color: var(--amarelo);
 }
 
-.cards{
+.cards-view, .cards{
     /* border: 1px solid; */
     width: 100%;
-    min-height: 30vh;
+    min-height: auto;
     height: auto;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     gap: .5rem;
+
+}
+
+.cards{
+    
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-color: transparent transparent; 
+}
+.cards::-webkit-scrollbar{
+    display: none;
+}
+
+
+.card{
+    width: 200px;
+    height: 300px;
+
+    flex: none;
+
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
 }
 
 .card-body{
     background-color: rgba(0, 255, 255, 0.309);
     width: 100%;
-    height: 150px;
+    height: auto;
 
     position: absolute;
     bottom: 0;
 
     display: flex;
     flex-direction: column;
-}
-.card{
-    width: 100px;
 }
 
 .card-titulo, .card-subtitulo, .card-btn{
@@ -60,8 +82,29 @@
 }
 .card-btn{
     background-color: var(--azul);
+    border-radius: 15px;
+
+    text-transform: uppercase;
 }
 .card-btn:hover{
     background-color: var(--rosado);
     color: var(--azul);
 }
+
+.left, .rigth{
+    /* border: 1px solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.left:hover, .rigth:hover{
+    color: var(--amarelo);
+    background-color: rgba(0, 255, 255, 0.107);
+}
+
