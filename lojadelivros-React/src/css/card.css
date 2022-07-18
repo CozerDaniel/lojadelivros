@@ -66,7 +66,7 @@
     flex-direction: column;
 }
 
-.card-titulo, .card-subtitulo, .card-btn{
+.card-titulo, .card-subtitulo{
     height: 30%;
     letter-spacing: .2rem;
 }
@@ -76,35 +76,5 @@
     color: var(--amarelo);
 }
 
-.card-btn, .card-btn:hover{
-    border: none;
-    transition: .3s;
-}
-.card-btn{
-    background-color: var(--azul);
-    border-radius: 15px;
 
-    text-transform: uppercase;
-}
-.card-btn:hover{
-    background-color: var(--rosado);
-    color: var(--azul);
-}
-
-.left, .rigth{
-    /* border: 1px solid; */
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    font-size: 2rem;
-    transition: .3s;
-    cursor: pointer;
-}
-
-.left:hover, .rigth:hover{
-    color: var(--amarelo);
-    background-color: rgba(0, 255, 255, 0.107);
-}
 

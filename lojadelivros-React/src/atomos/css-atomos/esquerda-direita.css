@@ -1,0 +1,16 @@
+.esquerda, .direita{
+    /* border: 1px solid; */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.esquerda:hover, .direita:hover{
+    color: var(--amarelo);
+    background-color: rgba(0, 255, 255, 0.107);
+}

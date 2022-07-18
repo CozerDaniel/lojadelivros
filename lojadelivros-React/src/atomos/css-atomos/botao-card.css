@@ -1,0 +1,17 @@
+.card-btn, .card-btn:hover{
+    border: none;
+    transition: .3s;
+}
+.card-btn{
+    background-color: var(--azul);
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    padding: 3px;
+
+    text-transform: uppercase;
+}
+.card-btn:hover{
+    background-color: var(--rosado);
+    color: var(--azul);
+}

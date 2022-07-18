@@ -1,6 +1,9 @@
 import React, {useState, useEffect, useRef} from "react";
-import { Link } from 'react-dom';
-import { BiCaretLeft, BiCaretRight } from 'react-icons/bi';
+
+
+import BotaoCard from "../atomos/botao-card";
+import Direita from "../atomos/direita";
+import Esquerda from "../atomos/esquerda";
 
 const Home = () => {
     const key = 'AIzaSyB9uGWjsSns0j9gXHP_IdsoRZn9g30eAzo'
@@ -23,16 +26,18 @@ const Home = () => {
         getBooks(keyUrl) 
     }, []);
 
-    function moverEsquerda(e){
-        e.preventDefaul;
-        carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
+    // function moverEsquerda(e){
+    //     e.preventDefaul;
+    //     carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
 
-    }
-    function moverDireita(e){
-        e.preventDefaul;
-        carrossel.current.scrollLeft += carrossel.current.offsetWidth;
+    // }
+    // function moverDireita(e){
+    //     e.preventDefaul;
+    //     carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
 
-    }
+    // }
+
+ 
 
     if (!Books || !Books.length) return <h3>Carregando...</h3> 
 
@@ -44,9 +49,7 @@ const Home = () => {
                 </div>
 
                 <div className="cards-view">
-                    <div className="left" onClick={moverEsquerda}>
-                        <BiCaretLeft />
-                    </div>
+                    <Esquerda />
 
                     <div className="cards" ref={carrossel}>
                         {Books.map((book) => {
@@ -64,19 +67,15 @@ const Home = () => {
                                             <h6> {book.volumeInfo.authors} </h6>
                                             <h6>Pág: {book.volumeInfo.pageCount} </h6>
                                         </div>
+                                        <BotaoCard />
 
-                                        <button className="card-btn">
-                                                saiba mais...
-                                        </button>
                                     </div>
                                 </div>
                             )
                         })} 
                     </div> 
 
-                    <div className="rigth" onClick={moverDireita}>
-                        <BiCaretRight />
-                    </div>
+                    <Direita/>
                 </div>
             </section>                     
         </div>
