@@ -5,6 +5,9 @@ import BotaoCard from "../atomos/botao-card";
 import Direita from "../atomos/direita";
 import Esquerda from "../atomos/esquerda";
 
+
+import '../atomos/css-atomos/botao-card.css'
+
 const Home = () => {
     const key = 'AIzaSyB9uGWjsSns0j9gXHP_IdsoRZn9g30eAzo'
     const url = 'https://www.googleapis.com/books/v1/volumes?q=inauthor:"Paulo+Coelho&key='
@@ -67,8 +70,7 @@ const Home = () => {
                                             <h6> {book.volumeInfo.authors} </h6>
                                             <h6>Pág: {book.volumeInfo.pageCount} </h6>
                                         </div>
-                                        <BotaoCard />
-
+                                        <BotaoCard route={`livros/${book.id}`}/>
                                     </div>
                                 </div>
                             )

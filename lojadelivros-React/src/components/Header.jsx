@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { BiSearchAlt2, BiMenu, BiCart} from 'react-icons/bi';
-
+import { Link } from 'react-router-dom'
 
 import Logo from '../img/logo.png';
 import {
@@ -48,7 +48,7 @@ const Header = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto menu" navbar>
                         <NavItem>
-                           <NavLink href='/' className='item-menu'>Loja de Livros</NavLink> 
+                           <Link to={'/'} className='item-menu'>Loja de Livros</Link> 
                         </NavItem>
                         <NavItem>
                             <NavLink href="cadastro" className='item-menu'>cadastro</NavLink>
