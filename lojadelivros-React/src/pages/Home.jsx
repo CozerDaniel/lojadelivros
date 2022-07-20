@@ -1,12 +1,15 @@
 import React, {useState, useEffect, useRef} from "react";
-
+import { BiCaretRight } from 'react-icons/bi'
 
 import BotaoCard from "../atomos/botao-card";
-import Direita from "../atomos/direita";
 import Esquerda from "../atomos/esquerda";
+import Direta from  "../atomos/direita"
+
+
 
 
 import '../atomos/css-atomos/botao-card.css'
+import '../atomos/css-atomos/esquerda-direita.css'
 
 const Home = () => {
     const key = 'AIzaSyB9uGWjsSns0j9gXHP_IdsoRZn9g30eAzo'
@@ -29,19 +32,6 @@ const Home = () => {
         getBooks(keyUrl) 
     }, []);
 
-    // function moverEsquerda(e){
-    //     e.preventDefaul;
-    //     carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
-
-    // }
-    // function moverDireita(e){
-    //     e.preventDefaul;
-    //     carrossel.current.scrollLeft -= carrossel.current.offsetWidth;
-
-    // }
-
- 
-
     if (!Books || !Books.length) return <h3>Carregando...</h3> 
 
     return (
@@ -52,7 +42,7 @@ const Home = () => {
                 </div>
 
                 <div className="cards-view">
-                    <Esquerda />
+                    <Esquerda mover={carrossel} />
 
                     <div className="cards" ref={carrossel}>
                         {Books.map((book) => {
@@ -70,14 +60,14 @@ const Home = () => {
                                             <h6> {book.volumeInfo.authors} </h6>
                                             <h6>Pág: {book.volumeInfo.pageCount} </h6>
                                         </div>
-                                        <BotaoCard route={`livros/${book.id}`}/>
+                                        <BotaoCard route={`book/${book.id}`}/>
                                     </div>
                                 </div>
                             )
                         })} 
                     </div> 
-
-                    <Direita/>
+                    
+                    <Direta mover={carrossel} />
                 </div>
             </section>                     
         </div>

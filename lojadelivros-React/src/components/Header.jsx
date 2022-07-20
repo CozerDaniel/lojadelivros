@@ -51,7 +51,7 @@ const Header = (props) => {
                            <Link to={'/'} className='item-menu'>Loja de Livros</Link> 
                         </NavItem>
                         <NavItem>
-                            <NavLink href="cadastro" className='item-menu'>cadastro</NavLink>
+                            <Link to={"cadastro"} className='item-menu'>cadastro</Link>
                         </NavItem>
                         <UncontrolledDropdown nav inNavbar>
                             <DropdownToggle nav caret className='item-menu'>
@@ -65,7 +65,7 @@ const Header = (props) => {
                                     fantasia
                                 </DropdownItem>
                                 <DropdownItem>
-                                        Me surpreenda
+                                    Me surpreenda
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
@@ -74,14 +74,14 @@ const Header = (props) => {
                                 Usuário
                             </DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem href='favoritos'>
-                                    favoritos
+                                <DropdownItem>
+                                    <Link to={'favoritos'}> favoritos </Link>
                                 </DropdownItem>
-                                <DropdownItem href='minhascompras'>
-                                    minhas compras
+                                <DropdownItem>
+                                    <Link to={'minhascompras'}> minhas compras </Link>                                    
                                 </DropdownItem>
-                                <DropdownItem href='carrinho'>
-                                    carrinho
+                                <DropdownItem>
+                                    <Link to={'carrinho'}> carrinho </Link>
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
