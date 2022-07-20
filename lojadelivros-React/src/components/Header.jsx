@@ -30,9 +30,9 @@ const Header = (props) => {
     return (
         <div>
             <Navbar expand="md" className='header'>
-                <NavbarBrand href="/">
+                <Link to={"/"}>
                     <img src={Logo} alt="" className='logo'/>
-                </NavbarBrand>
+                </Link>
                 <NavbarToggler onClick={toggle}>
                     <BiMenu className='icon-menu'/>
                 </NavbarToggler>
@@ -57,14 +57,14 @@ const Header = (props) => {
                             <DropdownToggle nav caret className='item-menu'>
                                 catálogo
                             </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem>
+                            <DropdownMenu className='submenu' >
+                                <DropdownItem className='item-submenu'>
                                     ficção
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem className='item-submenu'>
                                     fantasia
                                 </DropdownItem>
-                                <DropdownItem>
+                                <DropdownItem className='item-submenu'>
                                     Me surpreenda
                                 </DropdownItem>
                             </DropdownMenu>
@@ -73,15 +73,15 @@ const Header = (props) => {
                             <DropdownToggle nav caret className='item-menu'>
                                 Usuário
                             </DropdownToggle>
-                            <DropdownMenu>
-                                <DropdownItem>
-                                    <Link to={'favoritos'}> favoritos </Link>
+                            <DropdownMenu className='submenu' >
+                                <DropdownItem >
+                                    <Link to={'favoritos'} className='item-submenu'> favoritos </Link>
                                 </DropdownItem>
-                                <DropdownItem>
-                                    <Link to={'minhascompras'}> minhas compras </Link>                                    
+                                <DropdownItem >
+                                    <Link to={'minhascompras'} className='item-submenu' > minhas compras </Link>                                    
                                 </DropdownItem>
-                                <DropdownItem>
-                                    <Link to={'carrinho'}> carrinho </Link>
+                                <DropdownItem >
+                                    <Link to={'carrinho'} className='item-submenu'> carrinho </Link>
                                 </DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>

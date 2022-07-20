@@ -34,7 +34,7 @@
     
     overflow-x: auto;
     scroll-behavior: smooth;
-    scrollbar-color: transparent transparent; 
+    scrollbar-color: transparent transparent;
 }
 .cards::-webkit-scrollbar{
     display: none;
