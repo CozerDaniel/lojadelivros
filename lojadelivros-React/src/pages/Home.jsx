@@ -1,29 +1,45 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useRef } from "react";
 
-// import BotaoCard from "../atomos/botao-card";
 import Esquerda from "../atomos/esquerda";
-import CardBook from "../components/card";
 import Direta from  "../atomos/direita";
+
+import CardBookGratis from "../components/titulos-gratuitos";
+import CardBookPortugues from "../components/titulosPortugues";
 
 
 
 const Home = () => {
-    const carrossel = useRef(null);
+    const carrosselgratis = useRef(null);
+    const carrosselportugues = useRef(null);
 
     return (
         <div>
             <section className="area-cards">
                 <div className="titulo">
-                    <h3>melhores titulos: Paulo Coelho </h3>
+                    <h3> Títulos gratuitos </h3>
                 </div>
 
                 <div className="cards-view" >
-                    <Esquerda mover={carrossel} />
+                    <Esquerda mover={carrosselgratis} />
 
 
-                        <CardBook elemento={carrossel}/>
+                        <CardBookGratis elemento={carrosselgratis}/>
                     
-                    <Direta mover={carrossel} />
+                    <Direta mover={carrosselgratis} />
+                </div>
+            </section>                     
+            <section className="area-cards-dois">
+                <div className="titulo-dois">
+                    <h3> Português </h3>
+                </div>
+
+                <div className="cards-view" >
+                    <Esquerda mover={carrosselportugues} />
+
+
+                        <CardBookPortugues elemento={carrosselportugues}/>
+                    
+                    <Direta mover={carrosselportugues} />
                 </div>
             </section>                     
         </div>

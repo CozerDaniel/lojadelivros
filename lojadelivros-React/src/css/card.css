@@ -1,6 +1,8 @@
-.area-cards{
+/* area geral */
+.area-cards, .area-cards-dois{
     background-color: var(--azul);
-    max-width: 2000px;
+    max-width: 1440px;
+    width: 80vw;
     height: auto;
     margin: 1rem auto 0 auto;
     padding: .5rem;
@@ -9,7 +11,7 @@
     flex-direction: column;
 }
 
-.titulo h3{
+.titulo h3, .titulo-dois h3{
     text-align: center;
     margin-bottom: 20px;
 
@@ -18,6 +20,9 @@
     letter-spacing: .2rem;
     color: var(--amarelo);
 }
+
+
+/* Primeiro modelo */
 
 .cards-view, .cards{
     /* border: 1px solid; */
@@ -74,6 +79,16 @@
 .card-titulo{
     text-transform: uppercase;
     color: var(--amarelo);
+}
+
+
+/* segundo modelo */
+.area-cards-dois{
+    background-color: var(--rosado);
+}
+
+.titulo-dois h3{
+    color: var(--azul);
 }
 
 

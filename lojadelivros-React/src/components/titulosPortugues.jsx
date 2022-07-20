@@ -4,9 +4,9 @@ import BotaoCard from "../atomos/botao-card";
 
 import '../css/card.css'
 
-const CardBook = (props) => {
+const CardBookPortugues = (props) => {
     const key = 'AIzaSyB9uGWjsSns0j9gXHP_IdsoRZn9g30eAzo'
-    const url = 'https://www.googleapis.com/books/v1/volumes?q=inauthor:"Paulo+Coelho&key='
+    const url = 'https://www.googleapis.com/books/v1/volumes?q=filter=ptBR&key='
 
     const [Books, setBooks] = useState([]);
    
@@ -51,4 +51,4 @@ const CardBook = (props) => {
 
 }
 
-export default CardBook;
+export default CardBookPortugues;
